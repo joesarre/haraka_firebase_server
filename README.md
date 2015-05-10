@@ -42,11 +42,11 @@ You'll need an installation of visual studio so that there's a compiler on your 
 
 Install npm and node and then from the command line, run:
 
-npm install
-npm start
+	npm install
+	npm start
 
 You can test locally with swaks and perl using something like:
-perl swaks.pl -h example.com -t joe@example.com -f joe@example.com -s localhost -p 2025
+	perl swaks.pl -h example.com -t joe@example.com -f joe@example.com -s localhost -p 2025
 (On some machines I've had trouble with swaks making connections to the outside world)
 
 --------------------------------------------------------------------------------
@@ -57,11 +57,11 @@ So far I've been deploying to AWS.  It's probably possible to get it running in 
 
 Using git and the "eb" command line tool (download links are here http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-reference-get-started.html)
 
-npm install
-git init
-git add .
-git commit -m "initial commit"
-eb init
+	npm install
+	git init
+	git add .
+	git commit -m "initial commit"
+	eb init
 
 eb init will ask for loads of options:
 
@@ -71,9 +71,11 @@ eb init will ask for loads of options:
 	Create an RDS DB Instance? = Nope
 	Attach an instance profile = create
 
-Then run "eb start" and press "n"
-then wait for the environment to load
-then run "eb push"
+Then run "eb start" and press "n".
+
+Then wait for the environment to load.
+
+Then run "eb push".
 
 You'll then need to log on to AWS:
 * open up port 2025 on the box
