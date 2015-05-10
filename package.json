@@ -1,0 +1,14 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "connec",
+  "description": "Connec",
+  "dependencies": {
+    "Haraka": "^2.5.0",
+    "firebase": "^2.0.6",
+    "firebase-token-generator": "^2.0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
