@@ -12,8 +12,9 @@ It's listening for SMTP on port 2025.  Any emails it receives will go into fireb
 
 It's also watching Firebase for messages added to /outbox.
 
-To send, it's something like:
-outboxRef.push({date:Firebase.ServerValue.TIMESTAMP, from: encodeFirebase("joe@example.com"), to: encodeFirebase("craig@example.com"), subject: "yo", message: "yo"})
+To send, it's:
+
+	outboxRef.push({date:Firebase.ServerValue.TIMESTAMP, from: encodeFirebase("joe@example.com"), to: encodeFirebase("craig@example.com"), subject: "yo", message: "yo"})
 
 encodeFirebase is defined in /plugins/shared.js
 
@@ -45,7 +46,8 @@ Install npm and node and then from the command line, run:
 	npm install
 	npm start
 
-You can test locally with swaks and perl using something like:
+You can test locally with swaks and perl using:
+
 	perl swaks.pl -h example.com -t joe@example.com -f joe@example.com -s localhost -p 2025
 (On some machines I've had trouble with swaks making connections to the outside world)
 
